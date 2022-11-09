@@ -21,8 +21,8 @@ const Products = ({ cat, filters, sort }) => {
       try {
         const res = await axiosInstance.get(
           cat
-            ? `http://localhost:3001/api/products?category=${cat}`
-            : "http://localhost:3001/api/products"
+            ? `https://pilar-api.herokuapp.com/api/products?category=${cat}`
+            : "https://pilar-api.herokuapp.com/api/products"
         );
         setProducts(res.data);
       } catch (err) {}
